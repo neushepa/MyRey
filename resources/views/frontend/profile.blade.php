@@ -6,16 +6,20 @@
 
 @section('content')
     
-    {{-- Carousel : Start --}}
-    @include('components.frontend.carousel-recent')
-    {{-- Carousel : End --}}
+    {{-- About Me : Start --}}
+    @include('components.frontend.about-me')
+    {{-- About Me : End --}}
 
-    {{-- Simple About : Start --}}
-    @include('components.frontend.simple-about')
-    {{-- Simple About : End --}}
+    {{-- Educational Background : Start --}}
+    @include('components.frontend.educational-bg')
+    {{-- Educational Background : End --}}
 
-    {{-- Recent Activity: Start --}}
-    @include('components.frontend.activity-card-recent')
-    {{-- Recent Activity: End --}}
+    {{-- Profile : Start --}}
+    @include('components.frontend.profile-me')
+    {{-- Profile : End --}}
+
+    {{-- Location Maps : Start --}}
+    @include('components.frontend.location-maps')
+    {{-- Location Maps : End --}}
 
 @endsection
