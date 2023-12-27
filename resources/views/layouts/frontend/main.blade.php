@@ -1,78 +1,58 @@
+{{-- PHP Url : Start --}}
+@php
+    $url = Route::current()->getName();
+@endphp
+{{-- PHP Url : End --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Website - @yield('title')</title>
 
-  <title>Home - Fathforce Starter Kits Pro</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    {{-- Online Assets --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/frontend/img/favicon.png" rel="icon">
-  <link href="assets/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- Offline Assets --}}
+    <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    {{-- Custom CSS --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/frontend/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/frontend/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/frontend/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/frontend/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/frontend/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/frontend/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/frontend/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Moderna - v4.8.0
-  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container d-flex justify-content-between align-items-center">
+    {{-- Header : Start --}}
+    @if ($url == '')
+        @include('components.frontend.header-landing')
+    @else
+        @include('components.frontend.header-other')
+    @endif
+    {{-- Header : End --}}
 
-      <div class="logo">
-        <h1 class="text-light"><a href="/"><span>FATHFORCE</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/frontend/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-    <!-- .navbar -->
-    @include('layouts.frontend.nav')
-    <!-- .navbar -->
+    {{-- Content : Start --}}
+    @yield('content')
+    {{-- Content : End --}}
 
-    </div>
-  </header><!-- End Header -->
+    {{-- Footer : Start --}}
+    @include('components.frontend.footer-typea')
+    {{-- Footer : End --}}
 
-  @yield('content')
-  <!-- ======= Footer ======= -->
-  @include('layouts.frontend.footer')
-  <!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    {{-- Offline Assets --}}
+    <script src="{{ asset('assets/frontend/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/vendor/aos/aos.js') }}"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/frontend/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/frontend/vendor/aos/aos.js"></script>
-  <script src="assets/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/frontend/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/frontend/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/frontend/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/frontend/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/frontend/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/frontend/js/main.js"></script>
+    {{-- Custom JS --}}
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

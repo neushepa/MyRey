@@ -1,18 +1,21 @@
 <?php
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AlbumController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CommentsController;
-use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\SettingController;
-use App\Http\Controllers\TodoController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentsController;
+
+// Frontend Controller
+use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +30,8 @@ use Illuminate\Support\Facades\Route;
 
 // Start of the Public Routes
 
-Route::get('/', [FrontendController::class, 'index']);
-Route::get('/', [FrontendController::class, 'showslider']);
-Route::get('/about', [FrontendController::class, 'showAbout']);
-Route::get('/gallery', FrontendController::class . '@showgallery')->name('gallery.show');
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
 Route::get('/blog', BlogController::class . '@index')->name('blog.index');
 Route::get('/blog/{slug}', BlogController::class . '@show');
