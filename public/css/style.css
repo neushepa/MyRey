@@ -1,0 +1,143 @@
+/* Header Landing Background : Start */
+.header-satu {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/assets/bg-landing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Header Landing Background : End */
+
+/* Header Other : Start */
+.header-dua {
+    width: 100%;
+    height: 70vh;
+    background: url('../images/assets/bg-other.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Header Other : End */
+
+/* Header Nav : Start */
+.navbar-brand:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.nav-link:hover {
+    color: #dedede !important;
+}
+
+.nav-link:active {
+    color: #303030 !important;
+}
+
+.nav-link:focus {
+    border: none !important;
+    outline: none !important;
+}
+/* Header Nav : End */
+
+/* Text Header Landing Page : Start */
+.text-header-landing {
+    height: 75vh;
+}
+/* Text Header Landing Page : End */
+
+/* Text Header Other Page : Start */
+.text-header-other {
+    height: 50vh;
+}
+/* Text Header Other Page : End */
+
+/* Text Header Pink : Start */
+.text-header-pink {
+    color: #CF3774;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Text Header Pink : End */
+
+/* Carousel recent : Start */
+.carousel-slider {
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-indicators button.active {
+    background-color: #CF3774;
+    opacity: 1;
+}
+
+button.carousel-control-prev:hover {
+    color: #CF3774;
+}
+/* Carousel recent : End */
+
+/* Inter Text : Start */
+.text-inter {
+    font-family: 'Inter';
+}
+/* Inter Text : End */
+
+/* Simple About : Start */
+.simple-about {
+    background-color: #CF3774;
+}
+/* Simple About : End */
+
+/* Button Pink Custom : Start */
+.btn-pink-custom {
+    background-color: #CF3774;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-pink-custom:hover {
+    background-color: #CA2C67;
+    padding: 5px;
+    color: white
+}
+
+.btn-pink-custom:active {
+    outline: none;
+    border: none;
+    padding: 5px;
+    background-color: #B6285D;
+    color: white
+}
+/* Button Pink Custom : End */
+
+/* Card Recent Activity : Start */
+.card-recent-activity {
+    width: 85%; 
+    border-radius: 20px;
+}
+/* Card Recent Activity : End */
+
+/* Footer Type A : Start */
+.footer-type-a {
+    background-color: #CF3774;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: 'Inter';
+}
+/* Footer Type A : End */
+
+/* Responsive Design : Start */
+@media (max-width: 768px) {
+    .carousel-slider {
+        width: 100%;
+        height: 300px;
+    } 
+
+    .card-recent-activity {
+        width: 90%; 
+        border-radius: 20px;
+    }
+}
+/* Responsive Design : End */
