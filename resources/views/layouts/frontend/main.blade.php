@@ -1,6 +1,10 @@
 {{-- PHP Url : Start --}}
 @php
     $url = Route::current()->getName();
+
+    // Exploded URL
+    $explodedURL = explode('.', $url);
+
 @endphp
 {{-- PHP Url : End --}}
 
@@ -26,6 +30,9 @@
     {{-- Custom CSS --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+    {{-- Custom CSS In Page --}}
+    @yield('css')
+
 </head>
 
 <body>
@@ -43,7 +50,7 @@
     {{-- Content : End --}}
 
     {{-- Footer : Start --}}
-    @if (str_contains($url, 'profile'))
+    @if (str_contains($url, 'profile') || str_contains($url, 'article'))
         @include('components.frontend.footer-typeb')
     @else
         @include('components.frontend.footer-typea')
@@ -57,6 +64,9 @@
 
     {{-- Custom JS --}}
     <script src="{{ asset('js/script.js') }}"></script>
+
+    {{-- Custom JS In Page --}}
+    @yield('js')
 
 </body>
 

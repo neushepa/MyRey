@@ -17,7 +17,7 @@
                                 <a class="nav-link active fw-bold" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold" href="{{ route('profile') }}">Profile</a>
+                                <a class="nav-link active fw-bold" href="{{ route('profile.index') }}">Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active fw-bold" href="#">Activity</a>
@@ -46,11 +46,22 @@
                 {{-- Breadcrumb : Start --}}
                 @if (str_contains($url, 'activity'))
                     dummy
-                @elseif (str_contains($url, 'articles'))
-                    dummy
+                @elseif (str_contains($url, 'article'))
+                    @if (str_contains($url, 'detail'))
+                    <p>
+                        <a href="/" style="text-decoration: none; color: white">home</a> / 
+                        <a href="{{ route('article.index') }}" style="text-decoration: none; color: white">{{ $explodedURL[0] }}</a> /
+                        {{ $title }}
+                    </p>
+                    @else
+                    <p>
+                        <a href="/" style="text-decoration: none; color: white">home</a> / 
+                        {{ $explodedURL[0] }}
+                    </p>  
+                    @endif
                 @else
                     <p>
-                        <a href="/" style="text-decoration: none; color: white">home</a> / {{ $url }}
+                        <a href="/" style="text-decoration: none; color: white">home</a> / {{ $explodedURL[0] }}
                     </p>
                 @endif
                 {{-- Breadcrumb : End --}}

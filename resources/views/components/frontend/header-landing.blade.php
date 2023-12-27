@@ -17,7 +17,7 @@
                                 <a class="nav-link active fw-bold" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold" href="{{ route('profile') }}">Profile</a>
+                                <a class="nav-link active fw-bold" href="{{ route('profile.index') }}">Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active fw-bold" href="#">Activity</a>
