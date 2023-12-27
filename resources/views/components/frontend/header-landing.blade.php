@@ -14,10 +14,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold" href="#">Home</a>
+                                <a class="nav-link active fw-bold" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active fw-bold" href="#">Profile</a>
+                                <a class="nav-link active fw-bold" href="{{ route('profile') }}">Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active fw-bold" href="#">Activity</a>

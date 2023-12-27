@@ -43,7 +43,11 @@
     {{-- Content : End --}}
 
     {{-- Footer : Start --}}
-    @include('components.frontend.footer-typea')
+    @if (str_contains($url, 'profile'))
+        @include('components.frontend.footer-typeb')
+    @else
+        @include('components.frontend.footer-typea')
+    @endif
     {{-- Footer : End --}}
 
 
