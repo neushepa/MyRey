@@ -65,7 +65,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
-                                                <button class="btn btn-outline-light">Read More</button>
+                                                <a class="btn btn-outline-light" href="{{ route('article.detail', 'slug') }}">Read More</a>
                                             </div>
                                         </div>
                                     </div>

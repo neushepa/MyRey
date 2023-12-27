@@ -14,9 +14,9 @@
                     </div>
                     <div class="col-12 my-2">
                         <div class="d-grid gap-2">
-                            <button class="btn btn-outline-light rounded-pill">
+                            <a class="btn btn-outline-light rounded-pill" href="{{ route('profile.index') }}">
                                 Selengkapnya
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
