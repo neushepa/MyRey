@@ -50,12 +50,20 @@
     {{-- Content : End --}}
 
     {{-- Footer : Start --}}
-    @if (str_contains($url, 'profile') || str_contains($url, 'article'))
+    @if (
+    str_contains($url, 'profile') || 
+    str_contains($url, 'article.detail') ||
+    str_contains($url, 'activity.detail')
+    )
         @include('components.frontend.footer-typeb')
     @else
         @include('components.frontend.footer-typea')
     @endif
     {{-- Footer : End --}}
+
+    {{-- Modal if there is any : Start --}}
+    @yield('modal')
+    {{-- Modal if there is any : End --}}
 
 
     {{-- Offline Assets --}}

@@ -103,6 +103,14 @@
 }
 /* Card Recent Activity : End */
 
+
+/* Card Activity : Start */
+.card-recent-activity {
+    width: 75%;
+    border-radius: 20px;
+}
+/* Card Activity : End */
+
 /* Footer Type A : Start */
 .footer-type-a {
     background-color: #cf3774;
@@ -146,6 +154,12 @@
 }
 /* Timeline Vertical : End */
 
+/* Input Custom : Start */
+.input-custom:active {
+    outline: none;
+}
+/* Input Custom : End */
+
 /* Responsive Design : Start */
 @media (max-width: 768px) {
     .carousel-slider {
@@ -154,6 +168,11 @@
     }
 
     .card-recent-activity {
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .card-activity {
         width: 90%;
         border-radius: 20px;
     }

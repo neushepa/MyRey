@@ -41,13 +41,13 @@
             <div class="row">
                 @foreach ($activities as $activity)
                 <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center text-inter mt-3">
-                    <div class="card border-0 shadow-sm card-recent-activity">
+                    <div class="card border-0 shadow-sm card-activity">
                         <img src="{{ asset('images/article/' . $activity->image) }}" class="img-fluid" alt="..." style="border-top-right-radius: 20px; border-top-left-radius: 20px; height: 200px; object-fit: cover;">
                         <div class="card-body">
                             <h3 class="card-title fw-bold">{{ $activity->title }}</h3>
                             <small class="text-muted d-block">{{ $activity->date }}</small>
                             <div class="d-grid gap-2">
-                                <a href="#" class="mt-3 btn btn-pink-custom fw-bold">Selengkapnya</a>
+                                <a href="{{ route('activity.detail', 'slug') }}" class="mt-3 btn btn-pink-custom fw-bold">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
         {{-- Button : Start --}}
         <div class="col-12 mt-3">
             <div class="d-grid gap-2">
-                <a href="#" class="btn btn-pink-custom fw-bold" style="padding: 0 -10%;">Seluruh Aktivitas</a>
+                <a href="{{ route('activity.index') }}" class="btn btn-pink-custom fw-bold" style="padding: 0 -10%;">Seluruh Aktivitas</a>
             </div>
         </div>
         {{-- Button : End --}}
