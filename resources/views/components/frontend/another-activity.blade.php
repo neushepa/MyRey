@@ -1,7 +1,7 @@
 {{-- PHP Testing Variable : Start --}}
 @php
 
-    class ArticleDetail
+    class ActivityDetail
     {
         public $title;
         public $image;
@@ -14,13 +14,13 @@
         }
     }
 
-    $detailArticle = [
-        new ArticleDetail('Aktivitas 1', 'Berenang.jpg', '5 hari yang lalu'), 
-        new ArticleDetail('Aktivitas 2', 'Gunung.jpg', '5 hari yang lalu'), 
-        new ArticleDetail('Aktivitas 3', 'Gadget.jpg', '3 hari yang lalu'),
-        new ArticleDetail('Aktivitas 4', 'Gadget.jpg', '1 hari yang lalu'),
-        new ArticleDetail('Aktivitas 5', 'Gadget.jpg', '1 hari yang lalu'),
-        new ArticleDetail('Aktivitas 6', 'Gadget.jpg', '1 hari yang lalu'),
+    $detailAct = [
+        new ActivityDetail('Aktivitas 1', 'Berenang.jpg', '5 hari yang lalu'), 
+        new ActivityDetail('Aktivitas 2', 'Gunung.jpg', '5 hari yang lalu'), 
+        new ActivityDetail('Aktivitas 3', 'Gadget.jpg', '3 hari yang lalu'),
+        new ActivityDetail('Aktivitas 4', 'Gadget.jpg', '1 hari yang lalu'),
+        new ActivityDetail('Aktivitas 5', 'Gadget.jpg', '1 hari yang lalu'),
+        new ActivityDetail('Aktivitas 6', 'Gadget.jpg', '1 hari yang lalu'),
     ];
 
 @endphp
@@ -35,7 +35,7 @@
             <div class="container-fluid">
                 <div class="row text-inter">
                     <div class="col-12 my-2">
-                        <h1 class="fw-bold">Artikel Lainnya</h1>
+                        <h1 class="fw-bold">Aktivitas Lainnya</h1>
                     </div>
                 </div>
             </div>
@@ -48,14 +48,14 @@
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="container-fluid">
                         <div class="carousel-inner" role="listbox">
-                            @foreach ($detailArticle as $item)
+                            @foreach ($detailAct as $item)
                             <div class="carousel-item {{ ($loop->iteration == 1 ? 'active' : '') }}">
                                 <div class="col-lg-3 col-md-12 col-12 d-flex justify-content-center text-inter mt-3">
                                     <div class="card border-0 shadow-sm card-recent-activity">
                                         <img src="{{ asset('images/article/Berenang.jpg') }}" class="img-fluid" alt="..." style="border-top-right-radius: 20px; border-top-left-radius: 20px; height: 200px; object-fit: cover;">
                                         <div class="card-body">
-                                            <h3 class="card-title fw-bold">{{ $item->title }}</h3>
-                                            <small class="text-muted d-block">{{ $item->date }}</small>
+                                            <h3 class="card-title fw-bold">Judul</h3>
+                                            <small class="text-muted d-block">2 Hari Yang Lalu</small>
                                             <div class="d-grid gap-2">
                                                 <a href="{{ route('activity.detail', 'slug') }}" class="mt-3 btn btn-pink-custom fw-bold">Selengkapnya</a>
                                             </div>
