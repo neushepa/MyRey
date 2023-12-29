@@ -21,7 +21,7 @@
                         <a class="nav-link active fw-bold" href="{{ route('article.index') }}">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" href="#">Gallery</a>
+                        <a class="nav-link active fw-bold" href="{{ route('gallery') }}">Gallery</a>
                     </li>
                     <li class="nav-item">
                         
