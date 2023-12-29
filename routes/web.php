@@ -1,14 +1,14 @@
 <?php
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BlogController;
+// use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AlbumController;
-use App\Http\Controllers\GalleryController;
+// use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentsController;
@@ -18,6 +18,7 @@ use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\ArticleController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\ActivityController;
+use App\Http\Controllers\Frontend\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,19 +33,24 @@ use App\Http\Controllers\Frontend\ActivityController;
 
 // Start of the Public Routes
 Route::get('/', [IndexController::class, 'index']);
+
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article.detail');
 Route::get('/article/category/{category}', [ArticleController::class, 'category'])->name('article.category');
-Route::get('/activity', [ActivityController::class, 'index'])->name('activity.index');
-Route::get('/activity/category/{category}', [ActivityController::class, 'category'])->name('activity.category');
-Route::get('/activity/{slug}', [ActivityController::class, 'show'])->name('activity.detail');
 
-Route::get('/blog', BlogController::class . '@index')->name('blog.index');
-Route::get('/blog/{slug}', BlogController::class . '@show');
-Route::get('/blog/{id}', BlogController::class . '@showcat');
-Route::get('/cat/{id}', [PostController::class, 'showcat']);
-Route::get('/user/{id}', [PostController::class, 'showpost']);
+Route::get('/activity', [ActivityController::class, 'index'])->name('activity.index');
+Route::get('/activity/{slug}', [ActivityController::class, 'show'])->name('activity.detail');
+Route::get('/activity/category/{category}', [ActivityController::class, 'category'])->name('activity.category');
+
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+
+// Route::get('/blog', BlogController::class . '@index')->name('blog.index');
+// Route::get('/blog/{slug}', BlogController::class . '@show');
+// Route::get('/blog/{id}', BlogController::class . '@showcat');
+// Route::get('/cat/{id}', [PostController::class, 'showcat']);
+// Route::get('/user/{id}', [PostController::class, 'showpost']);
 
 Route::get('/profile/show/{id}', [UserController::class, 'show'])->name('profile.show');
 
