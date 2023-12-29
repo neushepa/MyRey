@@ -10,7 +10,16 @@ class ArticleController extends Controller
 
     public function index()
     {
-        
+        return view('frontend.article.index', [
+            'title' => 'Artikel',
+        ]);
+    }
+
+    public function category($category)
+    {
+        return view('frontend.article.index', [
+            'title' => 'category : ' . $category,
+        ]);
     }
 
     public function show($id)
