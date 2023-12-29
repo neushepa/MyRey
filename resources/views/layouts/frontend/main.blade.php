@@ -24,10 +24,17 @@
 
     {{-- Offline Assets --}}
     <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/glightbox/css/glightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/boxicons/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/animate.css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/magnific-popup/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/vendor/aos/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
 
+
     {{-- Custom CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     {{-- Custom CSS In Page --}}
@@ -65,13 +72,44 @@
     @yield('modal')
     {{-- Modal if there is any : End --}}
 
+    {{-- Online Assets --}}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
 
     {{-- Offline Assets --}}
+    <script src="{{ asset('assets/frontend/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/vendor/waypoints/noframework.waypoints.js') }}"></script>
     <script src="{{ asset('assets/frontend/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets/vendor/purecounter/purecounter.js') }}"></script>
     <script src="{{ asset('assets/frontend/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
 
     {{-- Custom JS --}}
     <script src="{{ asset('js/script.js') }}"></script>
+
+    {{-- Pop Up Image --}}
+    <script>
+        $(document).ready(function() {
+        $('.popup-image').magnificPopup({
+            type: 'image',
+		    closeOnContentClick: true,
+		    closeBtnInside: false,
+		    fixedContentPos: true,
+		    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		    image: {
+			    verticalFit: true
+		    },
+		    zoom: {
+			    enabled: true,
+			    duration: 300 // don't foget to change the duration also in CSS
+		    }
+            });
+        });
+    </script>
 
     {{-- Custom JS In Page --}}
     @yield('js')
