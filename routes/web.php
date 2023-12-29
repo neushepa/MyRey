@@ -44,7 +44,7 @@ Route::get('/activity', [ActivityController::class, 'index'])->name('activity.in
 Route::get('/activity/{slug}', [ActivityController::class, 'show'])->name('activity.detail');
 Route::get('/activity/category/{category}', [ActivityController::class, 'category'])->name('activity.category');
 
-Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
 // Route::get('/blog', BlogController::class . '@index')->name('blog.index');
 // Route::get('/blog/{slug}', BlogController::class . '@show');
