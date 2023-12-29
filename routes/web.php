@@ -31,13 +31,13 @@ use App\Http\Controllers\Frontend\ActivityController;
 */
 
 // Start of the Public Routes
-
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article.detail');
+Route::get('/article/category/{category}', [ArticleController::class, 'category'])->name('article.category');
 Route::get('/activity', [ActivityController::class, 'index'])->name('activity.index');
-Route::get('/activity/kategori/{category}', [ActivityController::class, 'category'])->name('activity.category');
+Route::get('/activity/category/{category}', [ActivityController::class, 'category'])->name('activity.category');
 Route::get('/activity/{slug}', [ActivityController::class, 'show'])->name('activity.detail');
 
 Route::get('/blog', BlogController::class . '@index')->name('blog.index');

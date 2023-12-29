@@ -18,13 +18,21 @@
                         <a class="nav-link active fw-bold" href="{{ route('activity.index') }}">Activity</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" href="#">Articles</a>
+                        <a class="nav-link active fw-bold" href="{{ route('article.index') }}">Articles</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active fw-bold" href="#">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" href="#">Contact Us</a>
+                        
+                        {{-- Checking if user authenticated : Start --}}
+                        @if (Auth::check())
+                            <a class="nav-link active fw-bold" href="/admin/dashboard">Dashboard</a>
+                        @else
+                            <a class="nav-link active fw-bold" href="{{ route('login') }}">Login</a>
+                        @endif
+                        {{-- Checking if user authenticated : End --}}
+
                     </li>
                 </ul>
             </div>

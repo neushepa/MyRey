@@ -41,6 +41,13 @@
                                 style="text-decoration: none; color: white">{{ $explodedURL[0] }}</a> /
                             {{ $title }}
                         </p>
+                    @elseif (str_contains($url, 'category'))
+                        <p>
+                            <a href="/" style="text-decoration: none; color: white">home</a> /
+                            <a href="{{ route('article.index') }}"
+                                style="text-decoration: none; color: white">{{ $explodedURL[0] }}</a> /
+                            {{ $title }}
+                        </p>
                     @else
                         <p>
                             <a href="/" style="text-decoration: none; color: white">home</a> /

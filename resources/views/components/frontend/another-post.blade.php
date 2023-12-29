@@ -15,12 +15,12 @@
     }
 
     $detailArticle = [
-        new ArticleDetail('Aktivitas 1', 'Berenang.jpg', '5 hari yang lalu'), 
-        new ArticleDetail('Aktivitas 2', 'Gunung.jpg', '5 hari yang lalu'), 
-        new ArticleDetail('Aktivitas 3', 'Gadget.jpg', '3 hari yang lalu'),
-        new ArticleDetail('Aktivitas 4', 'Gadget.jpg', '1 hari yang lalu'),
-        new ArticleDetail('Aktivitas 5', 'Gadget.jpg', '1 hari yang lalu'),
-        new ArticleDetail('Aktivitas 6', 'Gadget.jpg', '1 hari yang lalu'),
+        new ArticleDetail('Artikel 1', 'Berenang.jpg', '5 hari yang lalu'), 
+        new ArticleDetail('Artikel 2', 'Gunung.jpg', '5 hari yang lalu'), 
+        new ArticleDetail('Artikel 3', 'Gadget.jpg', '3 hari yang lalu'),
+        new ArticleDetail('Artikel 4', 'Gadget.jpg', '1 hari yang lalu'),
+        new ArticleDetail('Artikel 5', 'Gadget.jpg', '1 hari yang lalu'),
+        new ArticleDetail('Artikel 6', 'Gadget.jpg', '1 hari yang lalu'),
     ];
 
 @endphp

@@ -46,11 +46,11 @@
 @section('content')
 
     {{-- Detail Aktivitas : Start --}}
-    @include('components.frontend.post-detail')
+    @include('components.frontend.activity-detail')
     {{-- Detail Aktivitas : End --}}
 
     {{-- Another Post : Start --}}
-    @include('components.frontend.another-post')
+    @include('components.frontend.another-activity')
     {{-- Another Post : End --}}
 
 @endsection
